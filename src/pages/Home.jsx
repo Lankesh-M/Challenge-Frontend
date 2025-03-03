@@ -91,7 +91,7 @@ function Home({ user }) {
       const userProgress = user.challengesIn.find(c => c.challengeId === challenge._id);
       
       if (userProgress) {
-        if (userProgress.completed) {
+        if (userProgress.status == "Completed") {
           completedChallenges.push({ challenge, userProgress });
         } else {
           currentChallenges.push({ challenge, userProgress });
