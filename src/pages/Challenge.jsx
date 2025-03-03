@@ -35,7 +35,7 @@ function Challenge({ user }) {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3010/get-users');
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/get-users');
       const data = await response.json();
       
       if (data.allUsers) {
@@ -60,7 +60,7 @@ function Challenge({ user }) {
     setError('');
     
     try {
-      const response = await fetch('http://localhost:3010/createChallenge', {
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/createChallenge', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

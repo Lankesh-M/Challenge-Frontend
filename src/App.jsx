@@ -53,20 +53,3 @@ function App() {
 }
 
 export default App;
-
-// File structure
-// src/
-// ├── components/
-// │   ├── Header.jsx
-// │   ├── ChallengeCard.jsx
-// │   ├── FriendsList.jsx
-// │   └── ProgressBar.jsx
-// ├── pages/
-// │   ├── Login.jsx
-// │   ├── Signup.jsx
-// │   ├── Home.jsx
-// │   ├── Challenge.jsx
-// │   └── Profile.jsx
-// ├── App.jsx
-// ├── index.js
-// └── styles.css

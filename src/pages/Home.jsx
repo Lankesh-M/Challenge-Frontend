@@ -14,7 +14,7 @@ function Home({ user }) {
 
   const fetchChallenges = async () => {
     try {
-      const response = await fetch('http://localhost:3010/get-challenges');
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/get-challenges');
       const data = await response.json();
       
       if (data.allChallenges) {
@@ -29,7 +29,7 @@ function Home({ user }) {
 
   const joinChallenge = async (challengeId) => {
     try {
-      const response = await fetch('http://localhost:3010/user/join-challenge', {
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/user/join-challenge', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function Home({ user }) {
 
   const updateProgress = async (challengeId, progressToAdd) => {
     try {
-      const response = await fetch('http://localhost:3010/user/update-progress', {
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/user/update-progress', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

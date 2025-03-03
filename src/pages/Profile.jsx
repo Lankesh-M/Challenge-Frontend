@@ -19,7 +19,7 @@ function Profile({ user }) {
 
   const fetchChallenges = async () => {
     try {
-      const response = await fetch('http://localhost:3010/get-challenges');
+      const response = await fetch('https://challenge-backend-4yo4.onrender.com/get-challenges');
       const data = await response.json();
       
       if (data.allChallenges) {
