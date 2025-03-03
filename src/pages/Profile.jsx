@@ -37,7 +37,7 @@ function Profile({ user }) {
     if (!user.challengesIn) return;
     
     const userChallenges = user.challengesIn;
-    const completedChallenges = userChallenges.filter(c => c.completed).length;
+    const completedChallenges = userChallenges.filter(c => c.status == "Completed").length;
     const totalChallenges = userChallenges.length;
     const ongoingChallenges = totalChallenges - completedChallenges;
     const completionRate = totalChallenges > 0 
@@ -129,6 +129,7 @@ function Profile({ user }) {
                 </thead>
                 <tbody>
                   {userChallenges.map(challenge => {
+                  {console.log(userChallenges)}
                     const progressPercent = Math.round((challenge.progress / challenge.target) * 100);
                     
                     return (
@@ -143,8 +144,9 @@ function Profile({ user }) {
                           </div>
                         </td>
                         <td>
-                          <span className={`status ${challenge.completed ? 'completed' : 'ongoing'}`}>
-                            {challenge.completed ? 'Completed' : 'Ongoing'}
+                          <span className={`status ${challenge.status == "Completed" ? 'completed' : 'ongoing'}`}>
+                            {console.log(challenge)}
+                            {challenge.status == "Completed" ? 'Completed' : 'Ongoing'}
                           </span>
                         </td>
                       </tr>

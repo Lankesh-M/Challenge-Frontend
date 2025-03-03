@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Challenge from './pages/Challenge';
 import Profile from './pages/Profile';
 import Header from './components/Header';
-// import './Main.css';
+import './Main.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
